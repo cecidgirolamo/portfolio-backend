@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalHandler {
 
     @ExceptionHandler
-    public ResponseEntity<String> catchException(NullPointerException exception) {
-        return new ResponseEntity<>("error", HttpStatus.BAD_REQUEST);
+    public ResponseEntity<String> catchException(NotFoundExeption exception) {
+        return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }
