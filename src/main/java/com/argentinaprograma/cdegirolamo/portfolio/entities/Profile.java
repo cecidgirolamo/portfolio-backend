@@ -27,9 +27,9 @@ public class Profile {
 
     private String profilePhotoUrl;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "userId")
-    private List<WorkExperience> workExperiences;
+    private List<Experience> experiences;
 
     @OneToMany
     @JoinColumn(name = "userId")
