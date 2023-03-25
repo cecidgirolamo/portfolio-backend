@@ -11,6 +11,6 @@ public class ExperienceService {
   ExperienceRepository experienceRepository;
 
   public void deleteExperience(int id){
-    experienceRepository.delete(id);
+    experienceRepository.deleteById(id);
   }
 }
